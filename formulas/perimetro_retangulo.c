@@ -8,9 +8,7 @@ int main(){
 
     setlocale(LC_ALL, "Portuguese_Brazil.65001");
 
-    double perimetro;
-    double base;
-    double altura;
+    double perimetro, base, altura;
 
     printf("Digite o valor da base: \n");
     scanf("%lf", &base);

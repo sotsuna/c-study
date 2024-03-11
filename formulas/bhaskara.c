@@ -11,9 +11,7 @@ int main() {
     setlocale(LC_ALL, "Portuguese_Brazil.65001");
     
     //definicao dos valores a serem usados no calculo
-    double A;
-    double B;
-    double C;
+    double A, B, C;
 
     // entrada do valor de A
     printf("Digite o valor de A: \n");
