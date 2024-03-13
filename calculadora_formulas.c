@@ -43,27 +43,31 @@ int main()
 
     switch (choiceNumber)
     {
-        default:
-            printf("\nVocê inseriu um número não válido.\nPor favor, execute o programa novamente e insira um número válido!");
-            break;
-        case 1:
-            printf("\nCalculadora de Bhaskara selecionada!");
-            printf("\nCarregando...");
-            sleep(3);
-            calcBhaskara();
-            break;
-        case 2:
-            break;
-        case 3:
-            break;
-        case 4:
-            break;
-        case 5:
-            break;
-        case 6:
-            break;
-        case 7:
-            break;
+    default:
+        printf("\nVocê inseriu um número não válido.\nPor favor, execute o programa novamente e insira um número válido!");
+        break;
+    case 1:
+        printf("\nCalculadora de Bhaskara selecionada!");
+        printf("\nCarregando...");
+        sleep(3);
+        calcBhaskara();
+        break;
+    case 2:
+        printf("\nCalculadora de Bhaskara selecionada!");
+        printf("\nCarregando...");
+        sleep(3);
+        calcBhaskara();
+        break;
+        // case 3:
+        //     break;
+        // case 4:
+        //     break;
+        // case 5:
+        //     break;
+        // case 6:
+        //     break;
+        // case 7:
+        //     break;
     }
 
     return 0;
@@ -73,8 +77,8 @@ int main()
 void calcBhaskara()
 {
     printf("\e[1;1H\e[2J");
-    
-    double A,B,C;
+
+    double A, B, C;
 
     printf("\nBem vindo(a) a Calculadora de Bhaskara!\n");
 
@@ -98,10 +102,9 @@ void calcBhaskara()
     {
         double x1 = (-B + sqrt(delta)) / (2 * A);
         double x2 = (-B - sqrt(delta)) / (2 * A);
-        
+
         printf("\nO valor de x1 é: %.2lf\n", x1);
         printf("O valor de x2 é: %.2lf\n", x2);
-
     };
 };
 
