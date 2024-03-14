@@ -10,12 +10,12 @@
 
 // prototype functions pra nao dar b.o de compile depois XD
 void calcBhaskara();
-void calcTriangleArea(double, double);
-void calcRectanglePerimeter(double, double);
-void calcTrianglePerimeter(double, double, double);
-void calcCubeVolume(double);
-void calcSphereVolume(double);
-void calcParalelepipedoVolume(double, double, double);
+void calcTriangleArea();
+void calcRectanglePerimeter();
+void calcTrianglePerimeter();
+void calcCubeVolume();
+void calcSphereVolume();
+void calcParalelepipedoVolume();
 
 // programa principal
 int main()
@@ -53,17 +53,25 @@ int main()
         calcBhaskara();
         break;
     case 2:
-        printf("\nCalculadora de Bhaskara selecionada!");
+        printf("\nCalculadora da Area do Triângulo selecionada!");
         printf("\nCarregando...");
         sleep(3);
-        calcBhaskara();
+        calcTriangleArea();
         break;
-        // case 3:
-        //     break;
-        // case 4:
-        //     break;
-        // case 5:
-        //     break;
+    case 3:
+        printf("\nCalculadora do Perimetro do Retângulo selecionada!");
+        printf("\nCarregando...");
+        sleep(3);
+        calcRectanglePerimeter();
+        break;
+    case 4:
+        printf("\nCalculadora do Perimetro do Triângulo selecionada!");
+        printf("\nCarregando...");
+        sleep(3);
+        calcRectanglePerimeter();
+        break;
+    case 5:
+        break;
         // case 6:
         //     break;
         // case 7:
@@ -108,91 +116,105 @@ void calcBhaskara()
     };
 };
 
-// // funcao para calcular a area de um triangulo
-// void calcTriangleArea(double base, double altura)
-// {
+// funcao para calcular a area de um triangulo
+void calcTriangleArea()
+{
+    double base, altura;
 
-//     printf("Digite o valor da base: \n");
-//     scanf("%lf", &base);
+    printf("\nBem vindo(a) a Calculadora da Area do Triângulo!\n");
 
-//     printf("Digite o valor da valor: \n");
-//     scanf("%lf", &altura);
+    printf("Digite o valor da base: \n");
+    scanf("%lf", &base);
 
-//     double area = 0.5 * base * altura;
+    printf("Digite o valor da valor: \n");
+    scanf("%lf", &altura);
 
-//     printf("O valor da área do triangulo é: %.0lf\n", area);
-// };
+    double area = 0.5 * base * altura;
 
-// // funcao para calcular o perimetro de um retangulo
-// void calcRectanglePerimeter(double base, double altura)
-// {
-//     printf("Digite o valor da base: \n");
-//     scanf("%lf", &base);
+    printf("O valor da área do triangulo é: %.0lf\n", area);
+};
 
-//     printf("Digite o valor da altura: \n");
-//     scanf("%lf", &altura);
+// funcao para calcular o perimetro de um retangulo
+void calcRectanglePerimeter()
+{
+    double base, altura;
 
-//     double perimetro = (base + altura) * 2;
+    printf("\nBem vindo(a) a Calculadora da Area do Retângulo!\n");
 
-//     printf("O perímetro do retângulo é: %.2lf\n", perimetro);
-// }
+    printf("Digite o valor da base: \n");
+    scanf("%lf", &base);
 
-// // funcao para calcular o perimetro de um triangulo
-// void calcTrianglePerimeter(double lado1, double lado2, double lado3)
-// {
-//     printf("\nDigite o valor do lado 1: ");
-//     scanf("%lf", &lado1);
+    printf("Digite o valor da altura: \n");
+    scanf("%lf", &altura);
 
-//     printf("\nDigite o valor do lado 2: ");
-//     scanf("%lf", &lado2);
+    double perimetro = (base + altura) * 2;
 
-//     printf("\nDigite o valor do lado 3: ");
-//     scanf("%lf", &lado3);
+    printf("O perímetro do retângulo é: %.2lf\n", perimetro);
+};
 
-//     double P = lado1 + lado2 + lado3;
+// funcao para calcular o perimetro de um triangulo
+void calcTrianglePerimeter()
+{
+    double lado1, lado2, lado3;
 
-//     printf("\nO valor de perímetro é: %.1lf\n", P);
-// };
+    printf("\nBem vindo(a) a Calculadora do Perímetro do Triangulo!\n");
 
-// // funcao para calcular o volume de um cubo
-// void calcCubeVolume(double lado)
-// {
+    printf("\nDigite o valor do lado 1: ");
+    scanf("%lf", &lado1);
 
-//     printf("Informe o valor do lado: ");
-//     scanf("%lf", lado);
+    printf("\nDigite o valor do lado 2: ");
+    scanf("%lf", &lado2);
 
-//     double volume = lado * lado * lado;
+    printf("\nDigite o valor do lado 3: ");
+    scanf("%lf", &lado3);
 
-//     printf("O valor do volume é: %.2lf\n", volume);
-// };
+    double P = lado1 + lado2 + lado3;
 
-// // funcao para calcular o volume de uma esfera
-// void calcSphereVolume(double raio)
-// {
-//     const float PI = 3.141592;
+    printf("\nO valor de perímetro é: %.1lf\n", P);
+};
 
-//     printf("Digite o valor do raio: ");
-//     scanf("%lf", &raio);
+// funcao para calcular o volume de um cubo
+void calcCubeVolume()
+{
+    double lado;
 
-//     double v = (4 / 3) * PI * (raio * raio * raio);
+    printf("Informe o valor do lado: ");
+    scanf("%lf", lado);
 
-//     printf("O valor do volume é: %.2lf\n");
-// };
+    double volume = lado * lado * lado;
 
-// // funcao para calcular o volume de um paralelepipedo
-// void calcParalelepipedoVolume(double comprimento, double largura, double altura)
-// {
+    printf("O valor do volume é: %.2lf\n", volume);
+};
 
-//     printf("Informe o valor do comprimento: ");
-//     scanf("%lf", comprimento);
+// funcao para calcular o volume de uma esfera
+void calcSphereVolume()
+{
+    const float PI = 3.141592;
+    double raio;
 
-//     printf("Informe o valor do largura: ");
-//     scanf("%lf", largura);
+    printf("Digite o valor do raio: ");
+    scanf("%lf", &raio);
 
-//     printf("Informe o valor do altura: ");
-//     scanf("%lf", altura);
+    double v = (4 / 3) * PI * (raio * raio * raio);
 
-//     double volume = comprimento * largura * altura;
+    printf("O valor do volume é: %.2lf\n");
+};
 
-//     printf("O valor do volume é: %.2lf\n", volume);
-// };
+// funcao para calcular o volume de um paralelepipedo
+void calcParalelepipedoVolume()
+{
+    double comprimento, largura, altura;
+
+    printf("Informe o valor do comprimento: ");
+    scanf("%lf", comprimento);
+
+    printf("Informe o valor do largura: ");
+    scanf("%lf", largura);
+
+    printf("Informe o valor do altura: ");
+    scanf("%lf", altura);
+
+    double volume = comprimento * largura * altura;
+
+    printf("O valor do volume é: %.2lf\n", volume);
+};
